@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: pop-regular;
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+} 
+
+@font-face {
+    font-family: pop-bold;
+    src: url('./assets/fonts/Poppins-Bold.ttf');
+} 
+
+@font-face {
+    font-family: pop-semibold;
+    src: url('./assets/fonts/Poppins-SemiBold.ttf');
+}
