@@ -1,0 +1,11 @@
+.category_name_con {
+    @apply flex items-center;
+    gap: 14px;
+    cursor: pointer;
+} 
+
+.category_name {
+    font-size: 13px;
+    font-family: pop-semibold;
+    color: #334D6E;
+}

@@ -1,12 +1,14 @@
-import { GET_ALL_COUNTRIES } from "../../graphql/Queries";
-import { useQuery } from "@apollo/client";
+import { FC } from "react";
+import { useGetCountriesQuery } from "../../../../services/countries";
 
-const LIST = () => {
-  const { data, loading } = useQuery(GET_ALL_COUNTRIES);
+const LIST: FC = (): any => {
+  const { data = [], isLoading } = useGetCountriesQuery('');
 
-  if (data) {
-    console.log(data);
+  if (isLoading) {
+    return console.log('loading...');
   }
+  
+  console.log(data); 
 
   return (
     <div>index</div>

@@ -1,0 +1,8 @@
+.main {
+    @apply flex bg-secondary;
+} 
+
+.main_list {
+    @apply flex-col;
+    width: 100%;
+}

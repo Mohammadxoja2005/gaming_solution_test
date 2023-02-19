@@ -1,0 +1,48 @@
+.sidebar {
+  @apply bg-white w-64 px-6 shadow_for;
+  height: 100vh;
+  position: relative;
+}  
+
+.sidebar_line {
+    position: absolute;
+    border: 1px solid #EBEFF2;
+    width: 100%;
+    left: 0;
+    top: 60px;
+}
+
+.sidebar_title {
+  @apply text-primary; 
+  font-family: pop-bold;
+  font-size: 18px;
+  padding: 17px 0;
+}
+
+.sidebar_profile_info {
+    @apply flex gap-4 items-center mt-6; 
+    margin-bottom: 39px;
+
+}  
+
+.sidebar_profile_img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.sidebar_profile_data {
+    @apply  flex-col;
+} 
+
+.sidebar_profile_name {
+    font-family: pop-semibold;
+    font-size: 14px;
+} 
+
+.sidebar_profile_email {
+    @apply text-secondary;
+    font-family: pop-semibold;
+    font-size: 11px;
+}

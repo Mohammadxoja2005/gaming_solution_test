@@ -1,0 +1,29 @@
+.search {
+    @apply flex justify-between;
+    width: 100%;
+    background-color: white;
+    padding: 17px 38px;
+    border-top: 1px solid #90A0B7;
+} 
+
+.search_text {
+    @apply flex items-center;
+    gap: 15px;
+    width: 100%;
+} 
+
+.search_input { 
+    @apply text-secondary;
+    border: none;
+    outline: none; 
+    font-size: 12px;
+    font-family: pop-regular;
+    width: 100%;
+    
+} 
+
+.search_input::placeholder {
+ @apply text-secondary;
+ font-size: 12px;
+ font-family: pop-regular;
+} 

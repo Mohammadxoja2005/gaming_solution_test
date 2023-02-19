@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 // router 
 import { router } from "./routes/routes";
 
+
 const store = setupStore();
 
 const root = ReactDOM.createRoot(

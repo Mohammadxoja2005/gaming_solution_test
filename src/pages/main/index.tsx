@@ -1,26 +1,25 @@
-import { Fragment } from 'react';
+import { Fragment, FC} from 'react';
 // styles
 import styles from "./index.module.scss";
 // components  
 import LIST from './components/list';
 // layouts
 import SIDEBAR from '../../layouts/sidebar';
-// apollo/client 
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import SEARCH from '../../layouts/search';
 
-const MAIN = () => { 
-
-  const client = new ApolloClient({
-    uri: "https://countries.trevorblades.com/graphql", 
-    cache: new InMemoryCache()
-  })
+const MAIN: FC = () => {
 
   return (
     <Fragment>
-      <ApolloProvider client={client}>
+      <div className={styles.main}>
         <SIDEBAR />
-        <LIST />
-      </ApolloProvider>
+
+        <div className={styles.main_list}>
+          <SEARCH />
+        </div> 
+
+      </div>
+      {/* <LIST /> */}
     </Fragment>
   )
 }
