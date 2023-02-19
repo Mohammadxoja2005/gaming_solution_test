@@ -1,4 +1,4 @@
-import { Fragment, FC} from 'react';
+import { Fragment, FC } from 'react';
 // styles
 import styles from "./index.module.scss";
 // components  
@@ -16,10 +16,10 @@ const MAIN: FC = () => {
 
         <div className={styles.main_list}>
           <SEARCH />
-        </div> 
+          <LIST />
+        </div>
 
       </div>
-      {/* <LIST /> */}
     </Fragment>
   )
 }

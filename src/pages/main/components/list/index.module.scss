@@ -1,0 +1,25 @@
+.list {
+    @apply flex-col;
+    margin-left: 36px;
+} 
+
+.list_categorize {
+    @apply flex cursor-pointer mb-6;
+}  
+
+.list_cat_name {
+    font-family: pop-regular;
+    font-size: 12px;
+}
+
+.list_by_type_con {
+    @apply flex items-center gap-1;
+}  
+
+.list_by_type {
+    @apply text-primary;
+    font-size: 12px;
+    margin-left: 2px;
+    font-family: pop-regular;
+}
+

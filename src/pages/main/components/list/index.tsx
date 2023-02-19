@@ -1,17 +1,26 @@
 import { FC } from "react";
-import { useGetCountriesQuery } from "../../../../services/countries";
+// styles
+import styles from "./index.module.scss";
+// images 
+import DOWN from "../../../../assets/icons/down.png";
+// components
+import TABLE from "./table";
 
 const LIST: FC = (): any => {
-  const { data = [], isLoading } = useGetCountriesQuery('');
-
-  if (isLoading) {
-    return console.log('loading...');
-  }
-  
-  console.log(data); 
 
   return (
-    <div>index</div>
+    <div className={styles.list}>
+      <div className={styles.list_categorize}>
+        <p className={styles.list_cat_name}>Country:</p>
+
+        <div className={styles.list_by_type_con} >
+          <p className={styles.list_by_type}>All</p>
+          <img src={DOWN} alt="" />
+        </div>
+      </div>
+
+      <TABLE />
+    </div>
   )
 }
 

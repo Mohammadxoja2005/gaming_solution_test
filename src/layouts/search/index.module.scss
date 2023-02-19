@@ -3,8 +3,9 @@
     width: 100%;
     background-color: white;
     padding: 17px 38px;
-    border-top: 1px solid #90A0B7;
-} 
+    border-bottom: 1px solid #EBEFF2;
+    margin-bottom: 60px;
+}
 
 .search_text {
     @apply flex items-center;
@@ -26,4 +27,8 @@
  @apply text-secondary;
  font-size: 12px;
  font-family: pop-regular;
-} 
+}  
+
+.search_not {
+    @apply cursor-pointer;
+}

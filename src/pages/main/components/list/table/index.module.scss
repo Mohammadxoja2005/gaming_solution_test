@@ -1,0 +1,47 @@
+.table {
+    overflow: auto;
+    height: 500px;
+    width: 1000px;
+}
+
+.table_table {
+    @apply shadow_for mb-6;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.table_th:first-child {
+    @apply pl-6 cursor-pointer;
+}  
+
+.table_th:nth-child(2) {
+    @apply pl-6;
+}
+
+.table_th {
+    @apply flex-col text-secondary;
+    width: 232px;
+    text-align: start;
+    font-size: 13px;
+    font-family: pop-semibold;
+    padding: 14px 0;
+    padding-left: 54px;
+}
+
+.table_td:first-child {
+    @apply pl-6 cursor-pointer;
+}  
+
+.table_td:nth-child(2) {
+    @apply pl-6;
+}
+
+.table_td {
+    @apply text-secondary;
+    width: 232px;
+    text-align: start;
+    font-size: 13px;
+    font-family: pop-regular;
+    padding: 14px 0;
+    padding-left: 54px;
+}
