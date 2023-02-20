@@ -15,8 +15,8 @@ const TABLE: FC = (): any => {
     const [endData, setEndData] = useState([]);
 
     useEffect(() => {
-        try {
-            setEndData(data.countries.filter((value: any) => value.code == text.toUpperCase()));
+        try {(
+            setEndData(data.countries.filter((value: any) => value.code == text.toUpperCase())));
         } catch (error) {
             console.log(error);
         }
@@ -24,8 +24,8 @@ const TABLE: FC = (): any => {
 
     if (isLoading) {
         return <div>loading...</div>
-    }
-
+    } 
+    console.log(data);
     return (
         <div className={styles.table}>
             <table className={styles.table_table}>
@@ -36,6 +36,7 @@ const TABLE: FC = (): any => {
                     <th className={styles.table_th}>Native</th>
                     <th className={styles.table_th}>Phone</th>
                     <th className={styles.table_th}>Capital</th>
+                    <th className={styles.table_th}>Language</th>
                     <th className={styles.table_th}>Currency</th>
                     <th className={styles.table_th}>Continent</th>
                     <th className={styles.table_th}>Emoji</th>
@@ -49,6 +50,7 @@ const TABLE: FC = (): any => {
                             <td className={styles.table_td}>{value.native}</td>
                             <td className={styles.table_td}>{value.phone}</td>
                             <td className={styles.table_td}>{value.capital}</td>
+                            <td className={styles.table_td}>{value.languages[0].name}</td>
                             <td className={styles.table_td}>{value.currency}</td>
                             <td className={styles.table_td}>{value.continent.name}</td>
                             <td className={styles.table_td}>{value.emoji}</td>
