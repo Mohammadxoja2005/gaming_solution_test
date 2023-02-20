@@ -14,17 +14,17 @@ const TABLE: FC = (): any => {
     const [text,] = useAtom<string>(useSearch);
     const [endData, setEndData] = useState([]);
 
-    useEffect(() => { 
+    useEffect(() => {
         try {
             setEndData(data.countries.filter((value: any) => value.code == text.toUpperCase()));
         } catch (error) {
             console.log(error);
         }
-    }, [text]); 
+    }, [text]);
 
     if (isLoading) {
         return <div>loading...</div>
-    } 
+    }
 
     return (
         <div className={styles.table}>
@@ -43,15 +43,15 @@ const TABLE: FC = (): any => {
                 {endData && endData.map((value: any, index: number) => {
                     return (
                         <tr key={index}>
-                            <td className={styles.table_td} ><img className={styles.table_img} src={CHECK} alt="" /></td>
-                            <td className={styles.table_td} >{value.code}</td>
-                            <td className={styles.table_td} >{value.name}</td>
-                            <td className={styles.table_td} >{value.native}</td>
-                            <td className={styles.table_td} >{value.phone}</td>
-                            <td className={styles.table_td} >{value.capital}</td>
-                            <td className={styles.table_td} >{value.currency}</td>
-                            <td className={styles.table_td} >{value.continent.name}</td>
-                            <td className={styles.table_td} >{value.emoji}</td>
+                            <td className={styles.table_td}><img className={styles.table_img} src={CHECK} alt="" /></td>
+                            <td className={styles.table_td}>{value.code}</td>
+                            <td className={styles.table_td}>{value.name}</td>
+                            <td className={styles.table_td}>{value.native}</td>
+                            <td className={styles.table_td}>{value.phone}</td>
+                            <td className={styles.table_td}>{value.capital}</td>
+                            <td className={styles.table_td}>{value.currency}</td>
+                            <td className={styles.table_td}>{value.continent.name}</td>
+                            <td className={styles.table_td}>{value.emoji}</td>
                         </tr>
                     )
                 })}
