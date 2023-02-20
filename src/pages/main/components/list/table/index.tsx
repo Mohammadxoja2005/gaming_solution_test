@@ -15,8 +15,9 @@ const TABLE: FC = (): any => {
     const [endData, setEndData] = useState([]);
 
     useEffect(() => {
-        try {(
-            setEndData(data.countries.filter((value: any) => value.code == text.toUpperCase())));
+        try {
+            (
+                setEndData(data.countries.filter((value: any) => value.code == text.toUpperCase())));
         } catch (error) {
             console.log(error);
         }
@@ -24,7 +25,7 @@ const TABLE: FC = (): any => {
 
     if (isLoading) {
         return <div>loading...</div>
-    } 
+    }
     console.log(data);
     return (
         <div className={styles.table}>

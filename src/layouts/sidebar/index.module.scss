@@ -1,16 +1,25 @@
 .sidebar {
-  @apply bg-white w-64 px-6 shadow_for;
+  @apply bg-white w-64 shadow_for;
   height: 100vh;
-  position: relative;
-}  
+//   position: relative;
+} 
 
-.sidebar_line {
-    position: absolute;
-    border: 1px solid #EBEFF2;
-    width: 100%;
-    left: 0;
-    top: 60px;
+.sidebar_title_con{
+    @apply pl-6;
+    border-bottom: 1px solid #EBEFF2;
+} 
+
+.container {
+    @apply px-6;
 }
+
+// .sidebar_line {
+//     position: absolute;
+//     border: 1px solid #EBEFF2;
+//     width: 100%;
+//     left: 0;
+//     top: 60px;
+// }
 
 .sidebar_title {
   @apply text-primary; 
@@ -39,10 +48,14 @@
 .sidebar_profile_name {
     font-family: pop-semibold;
     font-size: 14px;
+    width: 121px; 
+    word-break: break-all;
 } 
 
 .sidebar_profile_email {
     @apply text-secondary;
     font-family: pop-semibold;
     font-size: 11px;
+    width: 116px;
+    word-break: break-all;
 }
