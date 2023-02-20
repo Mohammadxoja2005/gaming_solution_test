@@ -21,7 +21,11 @@ export const countriesApi = createApi({
                         native
                         phone
                         capital
-                        currency
+                        currency  
+                        emoji
+                        continent {
+                            name
+                        }
                     }
                  }
                 `

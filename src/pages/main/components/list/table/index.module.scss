@@ -12,10 +12,18 @@
 
 .table_th:first-child {
     @apply pl-6 cursor-pointer;
-}  
+}
 
 .table_th:nth-child(2) {
     @apply pl-6;
+} 
+
+.table_img {
+    max-width: 100px;
+}
+
+.table_th:last-child {
+    @apply pr-6;
 }
 
 .table_th {
