@@ -28,7 +28,7 @@ const TABLE: FC = (): any => {
 
     useEffect(() => {
         try {
-            (setEndData(data.countries.filter((value: any) => value.code == text.toUpperCase())));
+            (setEndData(data.countries.filter((value: any) => value.code == text.replace(/ /g,'').toUpperCase())));
         } catch (error) {
             console.log(error);
         }
