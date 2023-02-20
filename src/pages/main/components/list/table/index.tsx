@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect} from 'react'
+import React, { FC, useState, useEffect } from 'react'
 // styles 
 import styles from "./index.module.scss";
 //  services
@@ -11,17 +11,20 @@ import { useSearch } from '../../../../../hooks/useSearch';
 
 const TABLE: FC = (): any => {
     const { data, isLoading }: any = useGetCountriesQuery('');
-    const [text,] = useAtom(useSearch);
-    const [endData, setEndData] = useState();  
-    
-    // useEffect(() => {
-    //     data.filter((value: any) => value.code == text);
-    // }, [data !== undefined])
+    const [text,] = useAtom<string>(useSearch);
+    const [endData, setEndData] = useState([]);
+
+    useEffect(() => { 
+        try {
+            setEndData(data.countries.filter((value: any) => value.code == text.toUpperCase()));
+        } catch (error) {
+            console.log(error);
+        }
+    }, [text]); 
 
     if (isLoading) {
         return <div>loading...</div>
-    }  
-
+    } 
 
     return (
         <div className={styles.table}>
@@ -37,7 +40,7 @@ const TABLE: FC = (): any => {
                     <th className={styles.table_th}>Continent</th>
                     <th className={styles.table_th}>Emoji</th>
                 </tr>
-                {data && data.countries.map((value: any, index: number) => {
+                {endData && endData.map((value: any, index: number) => {
                     return (
                         <tr key={index}>
                             <td className={styles.table_td} ><img className={styles.table_img} src={CHECK} alt="" /></td>
