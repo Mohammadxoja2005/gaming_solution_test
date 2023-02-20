@@ -26,7 +26,7 @@ const TABLE: FC = (): any => {
     if (isLoading) {
         return <div>loading...</div>
     }
-    console.log(data);
+
     return (
         <div className={styles.table}>
             <table className={styles.table_table}>

@@ -1,10 +1,10 @@
-import React, {FC} from 'react'
+import React, { FC } from 'react'
 // styles 
 import styles from "./index.module.scss";
 // icons
 import DASHBOARD from "../../../assets/icons/dashboard.png";
 // react-router-dom
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CATEGORY: FC = () => {
     return (

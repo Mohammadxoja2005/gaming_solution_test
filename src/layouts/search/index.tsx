@@ -10,7 +10,7 @@ import { useSearch } from '../../hooks/useSearch';
 
 const SEARCH: FC = () => {
   const [, setText] = useAtom(useSearch);
-  
+
   return (
     <div className={styles.search}>
 

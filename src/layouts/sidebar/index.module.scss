@@ -1,61 +1,52 @@
 .sidebar {
   @apply bg-white w-64 shadow_for;
   height: 100vh;
-//   position: relative;
-} 
-
-.sidebar_title_con{
-    @apply pl-6;
-    border-bottom: 1px solid #EBEFF2;
-} 
-
-.container {
-    @apply px-6;
+  //   position: relative;
 }
 
-// .sidebar_line {
-//     position: absolute;
-//     border: 1px solid #EBEFF2;
-//     width: 100%;
-//     left: 0;
-//     top: 60px;
-// }
+.sidebar_title_con {
+  @apply pl-6;
+  border-bottom: 1px solid #ebeff2;
+}
+
+.container {
+  @apply px-6;
+}
 
 .sidebar_title {
-  @apply text-primary; 
+  @apply text-primary;
   font-family: pop-bold;
   font-size: 18px;
   padding: 17px 0;
 }
 
 .sidebar_profile_info {
-    @apply flex gap-4 items-center mt-6; 
-    margin-bottom: 39px;
-
-}  
+  @apply flex gap-4 items-center mt-6;
+  margin-bottom: 39px;
+}
 
 .sidebar_profile_img {
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background-color: gray;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: gray;
 }
 
 .sidebar_profile_data {
-    @apply  flex-col;
-} 
+  @apply flex-col;
+}
 
 .sidebar_profile_name {
-    font-family: pop-semibold;
-    font-size: 14px;
-    width: 121px; 
-    word-break: break-all;
-} 
+  font-family: pop-semibold;
+  font-size: 14px;
+  width: 121px;
+  word-break: break-all;
+}
 
 .sidebar_profile_email {
-    @apply text-secondary;
-    font-family: pop-semibold;
-    font-size: 11px;
-    width: 116px;
-    word-break: break-all;
+  @apply text-secondary;
+  font-family: pop-semibold;
+  font-size: 11px;
+  width: 116px;
+  word-break: break-all;
 }

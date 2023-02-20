@@ -7,7 +7,6 @@ import CATEGORY from './category';
 const SIDEBAR: FC = () => {
   return (
     <div className={styles.sidebar}>
-      {/* <div className={styles.sidebar_line}></div> */}
 
       <div className={styles.sidebar_title_con}>
         <h2 className={styles.sidebar_title}>Professional Gaming Solutions Ltd</h2>
