@@ -1,4 +1,4 @@
-import Reac, { FC } from 'react';
+import React, { FC } from 'react';
 // styles
 import styles from "./index.module.scss";
 // components 

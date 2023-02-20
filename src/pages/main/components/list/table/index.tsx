@@ -9,15 +9,26 @@ import CHECK from "../../../../../assets/icons/check.png";
 import { useAtom } from "jotai";
 import { useSearch } from '../../../../../hooks/useSearch';
 
+interface tableInterface {
+    code: string,
+    name: string,
+    native: string,
+    phone: string,
+    capital: string,
+    currency: string,
+    emoji: string,
+    languages: Array<{ name: string }>,
+    continent: { name: string }
+}
+
 const TABLE: FC = (): any => {
     const { data, isLoading }: any = useGetCountriesQuery('');
     const [text,] = useAtom<string>(useSearch);
-    const [endData, setEndData] = useState([]);
+    const [endData, setEndData] = useState<Array<tableInterface>>([]);
 
     useEffect(() => {
         try {
-            (
-                setEndData(data.countries.filter((value: any) => value.code == text.toUpperCase())));
+            (setEndData(data.countries.filter((value: any) => value.code == text.toUpperCase())));
         } catch (error) {
             console.log(error);
         }

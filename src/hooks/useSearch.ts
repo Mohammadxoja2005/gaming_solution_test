@@ -1,3 +1,3 @@
 import { atom } from "jotai";
 
-export const useSearch: any = atom('');
+export const useSearch = atom<string>('');
